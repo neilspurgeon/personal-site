@@ -373,13 +373,19 @@ h1, h2, h3 {
 .bold {
   font-weight: 600; }
 
+span.no-break {
+  display: inline-block; }
+
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
    GLOBAL
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 body { 
-  margin-left: 3em;
+  margin: 0 1em;
   height: 100vh;}
+  @media (min-width: 580px) {
+    body { 
+      margin: 0 3em;}}
 
 .container {
   height: 85vh;
@@ -394,25 +400,44 @@ body {
   vertical-align: middle;
   font-family: 'Maison Neue';
   font-weight: 100;
-  font-size: 3.5em;
-  line-height: 1.25; }
+  line-height: 1.25;
+  font-size: 1em; }
+  @media (min-width: 375px) {
+    .intro { 
+      font-size: 1.5em;} }
+  @media (min-width: 580px) {
+    .intro { 
+      font-size: 2em;} }
+  @media (min-width: 730px) {
+    .intro { 
+      font-size: 2.5em;} }
+  @media (min-width: 900px) {
+    .intro { 
+      font-size: 3.5em;} }
 
 .footer {
   position: fixed;
-  bottom: 2em; }
-
-.footer h2, .footer h3 {
-  font-size: 1em;}
+  bottom: 2em;
+  margin-right: 2em; }
 
 .footer .contact {
-  font-size: 1.3em; }
+  font-size: .7em; }
+  @media (min-width: 375px) {
+    .footer .contact { 
+      font-size: 1em;} }
+  @media (min-width: 580px) {
+    .footer .contact { 
+      font-size: 1.3em;} }
 
 .contact a {
-  margin-right: 2em;
+  margin-right: 1em;
   text-decoration: none; }
 
 .footer .links, .footer .legacy-link {
-  font-size: .9em; }
+  font-size: .7em; }
+  @media (min-width: 375px) {
+    .footer .links, .footer .legacy-link {
+      font-size: 1em;}}
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
    LINKS + SELECTION
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
