@@ -50,7 +50,7 @@ $susy: (
 // GLOBALS =============================================
 ////////////////////////////////////////////////////////
 
-$blue   : #0033F0;
+$blue   : #003f80;
 $black  : #000000;
 $white  : #FFFFFF;
 $border : 1px solid $blue;
@@ -87,7 +87,8 @@ a:hover {
 
 .container {
   @include container;
-    max-width: 1300px;
+  max-width: 1300px;
+  height: 100vh;
 }
 
 ////////////////////////////////////////////////////////
@@ -135,8 +136,11 @@ p {
 }
 
 header {
-  margin-top: 2.66rem;
+  // margin-top: 2.66rem;
   width: span(6);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
   @include susy-breakpoint($bp-large) {
     margin-top: 5rem;
   }
@@ -159,8 +163,7 @@ header {
   @include span(6);
   padding-bottom: 2em;
   @include susy-breakpoint($bp-large) {
-    @include span(2 at 5);
-    padding-bottom: 0;
+    @include span(6);
   }
 }
 
@@ -178,6 +181,7 @@ header {
 }
 
 footer {
+  display: none;
   clear: both;
   padding: 1em 0 2em;
   margin-bottom: 2em; 
